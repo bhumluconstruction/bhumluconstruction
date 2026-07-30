@@ -1,292 +1,188 @@
-import { navItems } from "@/types/navbar.types";
-import { footerItems } from "@/types/common.types";
+import type { ContactDetail, FooterSection, GalleryItem, HeroHighlight, ProjectItem, ServiceItem, StatItem } from "@/types/common.types";
+import type { NavItem } from "@/types/navbar.types";
 
-export const NavItems: navItems[] = [
+export const navItems: NavItem[] = [
+  { id: 1, title: "Home", url: "/" },
+  { id: 2, title: "About", url: "/about" },
   {
-    id: 1,
-    title: "Home",
-    url: "/",
-  },
-  {
-    id: 2,
+    id: 3,
     title: "Services",
     url: "/services",
+    children: [
+      { title: "Survey", url: "/services/survey" },
+      { title: "Construction", url: "/services/construction" },
+    ],
   },
-  {
-    id: 3,
-    title: "Careers",
-    url: "/careers",
-  },
-  {
-    id: 4,
-    title: "Contact",
-    url: "/contact",
-  },
-  {
-    id: 5,
-    title: "Blog",
-    url: "/blog",
-  },
-  {
-    id: 6,
-    title: "Gallery",
-    url: "/gallery",
-  },
+  { id: 4, title: "Projects", url: "/projects" },
+  { id: 5, title: "Gallery", url: "/gallery" },
+  { id: 6, title: "Contact", url: "/contact" },
 ];
-export const FooterItems: footerItems[] = [
-  {
-    title: "LAWN CARE",
-    itemsmenu: [
-      {
-        item: "Fertilization",
-      },
-      {
-        item: "Weed Control",
-      },
-      {
-        item: "Lawn Growth Regulator",
-      },
-      {
-        item: "Insect & Grub Control",
-      },
-      {
-        item: "Fungus & Disease Control",
-      },
-      {
-        item: "Soil analysis",
-      },
-      {
-        item: "Aeration",
-      },
-      {
-        item: "Seeding",
-      },
-    ],
-  },
-  {
-    title: "TREE & PLANT CARE",
-    itemsmenu: [
-      {
-        item: "Tree Pruning",
-      },
-      {
-        item: "Tree Removal",
-      },
-      {
-        item: "Stump Grinding",
-      },
-      {
-        item: "Plant Health Care",
-      },
-      {
-        item: "Insects & Disease Control",
-      },
-      {
-        item: "Ash Borer treatment",
-      },
-      {
-        item: "Tree Fertilization",
-      },
-      {
-        item: "Tree Consulting",
-      },
-    ],
-  },
-  {
-    title: "PEST CONTROL",
-    itemsmenu: [
-      {
-        item: "Pest guard Packages",
-      },
-      {
-        item: "Insect Barrier",
-      },
-      {
-        item: "Mole Control",
-      },
-      {
-        item: "Rodent Guard",
-      },
-      {
-        item: "Mosquito Guard",
-      },
-      {
-        item: "Flea & Tick Control",
-      },
-    ],
-  },
-  {
-    title: "LANDSCAPING",
-    itemsmenu: [
-      {
-        item: "Hardscape",
-      },
-      {
-        item: "Landscape Lighting",
-      },
-      {
-        item: "Mulch",
-      },
-      {
-        item: "Tree Planting",
-      },
 
-      {
-        item: "Drainage",
-      },
-      {
-        item: "Portfolio",
-      },
+export const footerSections: FooterSection[] = [
+  {
+    title: "Company",
+    itemsmenu: [
+      { item: "About" },
+      { item: "Projects" },
+      { item: "Gallery" },
     ],
   },
   {
-    title: "IRRIGATION",
+    title: "Services",
     itemsmenu: [
-      {
-        item: "Inspection",
-      },
-      {
-        item: "Installation",
-      },
-      {
-        item: "Repairs",
-      },
-      {
-        item: "Upgrades",
-      },
+      { item: "Survey" },
+      { item: "Construction" },
+      { item: "Route Planning" },
     ],
   },
   {
-    title: "RESOURCES",
+    title: "Reach Us",
     itemsmenu: [
-      {
-        item: "Blogs",
-      },
-      {
-        item: "Members",
-      },
-      {
-        item: "careers",
-      },
-    ],
-  },
-  {
-    title: "ABOUT",
-    itemsmenu: [
-      {
-        item: "Our Team",
-      },
-      {
-        item: "Testimonials",
-      },
-      {
-        item: "Projects",
-      },
+      { item: "Kathmandu, Nepal" },
+      { item: "+977 98-XXXXXXXX" },
+      { item: "info@bhumlu.com" },
     ],
   },
 ];
 
-export const servicephotos = [
+export const heroHighlights: HeroHighlight[] = [
+  { label: "Services", value: "Survey · Construction" },
+  { label: "Coverage", value: "Nepal · Hills & high-altitude zones" },
+  { label: "Delivery", value: "Route to commissioning" },
+];
+
+export const statsData: StatItem[] = [
+  { value: "120+", title: "Projects", detail: "Survey and build milestones" },
+  { value: "650 km", title: "Survey Routes", detail: "Road, ridge and corridor coverage" },
+  { value: "45+", title: "Engineers", detail: "Field and design specialists" },
+  { value: "10+", title: "Years", detail: "Reliable delivery in Nepal" },
+];
+
+export const servicesData: ServiceItem[] = [
   {
-    title: "Commerical Landscaping",
-    src: "/images/Commercial.png",
-    alt: "Commerical Landscaping",
+    eyebrow: "Survey",
+    title: "Transmission Line Survey",
+    description: "Route alignment, topographic surveys, tower spotting and corridor planning.",
+    overview: "Precision survey services for corridor planning and tower spotting across demanding terrain.",
+    features: [
+      "Topographic and profile surveys with GIS deliverables.",
+      "Tower spotting, route alignment and corridor optimization.",
+      "Stakeout support and field coordination during pre-construction.",
+    ],
+    image: "/Gallery/image1.png",
+    href: "/services/survey",
   },
   {
-    title: "Landscape Maintenance",
-    src: "/images/Landscape.png",
-    alt: "Landscape Maintenance",
-  },
-  {
-    title: "Landscape Drainage",
-    src: "/images/Drainage.png",
-    alt: "Landscape Drainage",
-  },
-  {
-    title: "Landscape Irrigration",
-    src: "/images/Irrigation.png",
-    alt: "Landscape Irrigration",
-  },
-  {
-    title: "Backflow Inspection",
-    src: "/images/Backflow.png",
-    alt: "Backflow Inspection",
-  },
-  {
-    title: "Tractor Mowing",
-    src: "/images/Tractor.png",
-    alt: "Tractor Mowing",
+    eyebrow: "Construction",
+    title: "Transmission Line Construction",
+    description: "Foundation works, tower erection, conductor stringing, testing and commissioning.",
+    overview: "Civil execution and line delivery from foundations through commissioning.",
+    features: [
+      "Foundations, access planning and tower erection.",
+      "Conductor stringing, sagging and live-line safety.",
+      "Testing, commissioning and handover support.",
+    ],
+    image: "/Gallery/image2.png",
+    href: "/services/construction",
   },
 ];
 
-export const resiservice = [
+export const projectsData: ProjectItem[] = [
   {
-    id: 1,
-    text: "We Provide Comprehensive Landscaping Services with a Personal Touch",
-    src: "/icons/seed.svg",
-    alt: "seed",
+    eyebrow: "Project 01",
+    title: "132kV Transmission Line",
+    slug: "132kv-transmission-line",
+    href: "/projects/132kv-transmission-line",
+    location: "Kavrepalanchok",
+    status: "In progress",
+    description: "Route survey, tower spotting and conductor installation for a critical uphill corridor.",
+    scope: "Complete route planning, tower spotting, foundation design and conductor stringing across challenging terrain.",
+    timeline: "12 months from survey mobilization to commissioning.",
+    client: "Nepal Electricity Authority",
+    outcome: "Improved line reliability, reduced corridor risk, and optimized tower placement for steep slopes.",
+    details: [
+      "Topographic survey across 72 km of ridge and valley.",
+      "Tower foundation design with local material adaptation.",
+      "Stringing and sagging with live-line safety protocols.",
+    ],
+    image: "/Gallery/image1.png",
   },
   {
-    id: 2,
-    text: "Ensures every element of your landscape is thoughtfully designed and flawlessly executed.",
-    src: "/icons/leaf.svg",
-    alt: "leaf",
+    eyebrow: "Project 02",
+    title: "Tower Foundation Work",
+    slug: "tower-foundation-work",
+    href: "/projects/tower-foundation-work",
+    location: "Sindhupalchok",
+    status: "Planning",
+    description: "Foundations and access design for mountainous tower pad construction.",
+    scope: "Advance site preparation, soil stabilization and access road layout for tower foundations.",
+    timeline: "8 months of design, permitting and foundation execution.",
+    client: "Regional transmission developer",
+    outcome: "Secure tower bases with minimal slope disturbance and reliable load-bearing capacity.",
+    details: [
+      "Geotechnical study for steep embankments.",
+      "Access road alignment for heavy equipment.",
+      "Concrete tower pad design with drainage management.",
+    ],
+    image: "/Gallery/image2.png",
   },
   {
-    id: 3,
-    text: "Priced with fairness in mind, offering exceptional quality without compromising your budget.",
-    src: "/icons/Discount.svg",
-    alt: "discount",
+    eyebrow: "Project 03",
+    title: "Survey & Alignment",
+    slug: "survey-alignment",
+    href: "/projects/survey-alignment",
+    location: "Dolakha",
+    status: "Complete",
+    description: "Precision topographic survey and alignment optimization for rugged terrain.",
+    scope: "Corridor analysis, GIS mapping, profile drawing and environmental coordination.",
+    timeline: "6 months from initial reconnaissance to final alignment approval.",
+    client: "Infrastructure planning authority",
+    outcome: "A constructible alignment that balanced terrain, access and long-term reliability.",
+    details: [
+      "GIS-based route refinement with slope analysis.",
+      "Stakeout and tower spotting for minimum disruption.",
+      "Final alignment plan with stakeholder review.",
+    ],
+    image: "/Gallery/image3.png",
   },
 ];
 
-export const homeblogs = [
+export const galleryData: GalleryItem[] = [
+  { title: "Route Survey", accent: "amber", src: "/Gallery/image1.png", alt: "Survey team in the field" },
+  { title: "Foundation Site", accent: "teal", src: "/Gallery/image2.png", alt: "Tower foundation preparation" },
+  { title: "Tower Assembly", accent: "amber", src: "/Gallery/image3.png", alt: "Transmission tower erection" },
+  { title: "Line Stringing", accent: "teal", src: "/Gallery/image4.png", alt: "Conductor stringing operation" },
+  { title: "Field Coordination", accent: "amber", src: "/Gallery/image5.png", alt: "Field team coordination" },
+  { title: "Commissioning", accent: "teal", src: "/Gallery/image.png", alt: "Final line commissioning" },
+];
+
+export const aboutValues = [
   {
-    src: "/images/blogs1.png",
-    date: "September 13, 2025",
-    title: "Low-Maintenance Landscaping: Beauty Without the Backache",
-    info: "Want a stunning yard without spending your weekends on upkeep? Learn how to create a hassle-free landscape using hardy plants, smart layouts, and time-saving techniques.",
-    alt: "Lawngarden",
+    title: "Vision",
+    description: "To make Nepal’s power grid more reliable by delivering transmission line work that is precise, resilient and ready for future expansion.",
   },
   {
-    src: "/images/blogs1.png",
-    date: "September 13, 2025",
-    title: "Low-Maintenance Landscaping: Beauty Without the Backache",
-    info: "Want a stunning yard without spending your weekends on upkeep? Learn how to create a hassle-free landscape using hardy plants, smart layouts, and time-saving techniques.",
-    alt: "Lawngarden",
+    title: "Mission",
+    description: "To unite surveying discipline, engineering know-how and local execution so every line is delivered safely, on time and on budget.",
+  },
+  {
+    title: "Values",
+    description: "We build with integrity, respect the land and communities, and place safety and quality at the center of every project.",
   },
 ];
-export const blogsdata = [
-  {
-    src: "/images/blogs1.png",
-    alt: "Lawngarden",
-    date: "September 13 2025",
-    title: "Low-Maintenance Landscaping: Beauty Without the Backache",
-    content:
-      "Want a stunning yard without spending your weekends on upkeep? Learn how to create a hassle-free landscape using hardy plants, smart layouts, and time-saving techniques.",
-  },
-  {
-    src: "/images/blogs2.png",
-    alt: "garden",
-    date: "October 20, 2025",
-    title: "Sustainable Landscaping: Eco-Friendly Design for a Greener Future",
-    content:
-      "Go green in more ways than one. Explore sustainable landscaping practices that reduce waste, save water, and support the local ecosystem—without sacrificing style.",
-  },
-  {
-    src: "/images/blogs1.png",
-    alt: "Lawngarden",
-    date: "September 13 2025",
-    title: "Low-Maintenance Landscaping: Beauty Without the Backache",
-    content:
-      "Want a stunning yard without spending your weekends on upkeep? Learn how to create a hassle-free landscape using hardy plants, smart layouts, and time-saving techniques.",
-  },
-  {
-    src: "/images/blogs2.png",
-    alt: "garden",
-    date: "October 20, 2025",
-    title: "Sustainable Landscaping: Eco-Friendly Design for a Greener Future",
-    content:
-      "Go green in more ways than one. Explore sustainable landscaping practices that reduce waste, save water, and support the local ecosystem—without sacrificing style.",
-  },
+
+export const contactDetails: ContactDetail[] = [
+  { label: "Office", value: "Kathmandu, Nepal", href: "https://maps.google.com" },
+  { label: "Phone", value: "+977 98-XXXXXXXX", href: "tel:+9779899999999" },
+  { label: "Email", value: "info@bhumlu.com", href: "mailto:info@bhumlu.com" },
+];
+
+export const marqueeWords = [
+  "Route Alignment",
+  "Topographic Survey",
+  "Tower Spotting",
+  "Foundation Works",
+  "Tower Erection",
+  "Stringing & Sagging",
+  "Testing & Commissioning",
 ];

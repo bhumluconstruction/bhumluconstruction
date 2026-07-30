@@ -1,27 +1,23 @@
-import About from '@/components/pages/landing/About'
-import Herosection from '@/components/pages/landing/Herosection'
-import Services from '@/components/pages/landing/Services'
-import React from 'react'
-import Residential from '@/components/pages/landing/Service'
-import Consultation from "@/components/pages/landing/consult";
-import Works from '@/components/pages/landing/Works'
-import Clients from '@/components/pages/landing/Clients'
-import Blogs from '@/components/pages/landing/Blogs'
-import SinceTexas from '@/components/pages/landing/sinceTexas'
-const page = () => {
+import FadeIn from "@/components/animations/FadeIn";
+import CTA from "@/components/CTA";
+import HeroStats from "@/components/Herostats";
+import HomeGallery from "@/components/HomeGallery";
+import Hero from "@/components/pages/landing/Hero";
+import HomeProjects from "@/components/pages/landing/HomeProjects";
+import HomeServices from "@/components/pages/landing/HomeServices";
+import Stats from "@/components/Stats";
+export default function HomePage() {
   return (
-    <div>
-      <Herosection/>
-      <About/>
-      <Services/>
-      <Residential/>
-      <Consultation/>
-      <Works/>
-      <Clients/>
-      <SinceTexas/>
-      <Blogs/>
-    </div>
-  )
+    <>
+      <Hero />
+      <HeroStats />
+      <FadeIn>
+        <HomeServices />
+      </FadeIn>
+      <HomeProjects />
+      <Stats />
+      <HomeGallery />
+      <CTA />
+    </>
+  );
 }
-
-export default page

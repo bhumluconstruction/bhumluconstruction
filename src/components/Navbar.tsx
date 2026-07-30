@@ -1,165 +1,152 @@
-'use client'
-import React, { useState } from "react";
-import { NavItems } from "@/lib/constants/data";
-import Link from "next/link";
-import Image from "next/image";
-import { Button } from "./ui/button";
+"use client";
 
-const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
+import { HiChevronDown, HiMenuAlt3, HiX } from "react-icons/hi";
+import { navItems } from "@/lib/constants/data";
+
+export default function Navbar() {
+  const [open, setOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<number | null>(null);
+  const [scrolled, setScrolled] = useState(false);
+  const navRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+
+    window.addEventListener("scroll", onScroll);
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    const onClickOutside = (event: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+        setActiveDropdown(null);
+      }
+    };
+
+    document.addEventListener("mousedown", onClickOutside);
+    return () => document.removeEventListener("mousedown", onClickOutside);
+  }, []);
 
   return (
-    <main>
-      <div className="lg:flex lg:flex-row md:flex-col justify-between items-center px-6 md:px-8 lg:px-12 xl:px-30 py-5 z-[100] w-full fixed bg-transparent text-white  transition-all  duration-300">
-        {/* Hamburger Menu (Mobile Only) */}
-        <div className="lg:hidden absolute left-4 top-6 z-50">
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="p-2 transition-all duration-300 hover:scale-110"
-          >
-            {isMenuOpen ? (
-              <svg
-                className="h-8 w-8"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            ) : (
-              <svg
-                className="h-8 w-8"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            )}
-          </button>
-        </div>
+    <header
+      ref={navRef}
+      className={`fixed left-0 top-0 z-50 w-full border-b transition-all duration-300 ${
+        scrolled
+          ? "border-slate-200 bg-white/95 shadow-sm backdrop-blur"
+          : "border-transparent bg-white/90"
+      }`}
+    >
+      <div className="container flex h-20 items-center justify-between">
+        <Link href="/" className="flex items-center gap-3">
+          <div className="flex h-11 w-11 items-center justify-center rounded-full bg-amber-500 text-sm font-black text-slate-950">
+            B
+          </div>
+          <div className="leading-none">
+            <span className="block text-lg font-black tracking-[0.24em] text-slate-950">
+              BHUMLU
+            </span>
+            <span className="block text-[10px] uppercase tracking-[0.35em] text-amber-600">
+              Construction
+            </span>
+          </div>
+        </Link>
 
-        {/* Navigation Items (Desktop) */}
-        <div className="hidden lg:flex flex-col sm:flex-row gap-3 sm:gap-5 md:gap-8 items-center mb-4 sm:mb-0 overflow-x-auto sm:overflow-visible">
-          {NavItems.map((link) => (
-            <div
-              key={link.id}
-              className="hover:scale-105 transition-transform duration-200"
-            >
-              <ul>
+        <nav className="hidden gap-8 lg:flex">
+          {navItems.map((link) => (
+            <div key={link.id} className="relative">
+              {link.children ? (
+                <button
+                  type="button"
+                  onClick={() =>
+                    setActiveDropdown((current) => (current === link.id ? null : link.id))
+                  }
+                  className="inline-flex items-center gap-2 text-sm font-medium tracking-[0.08em] text-slate-700 transition hover:text-cyan-600"
+                >
+                  {link.title}
+                  <HiChevronDown
+                    className={`h-4 w-4 transition ${
+                      activeDropdown === link.id ? "text-cyan-600 rotate-180" : "text-slate-700"
+                    }`}
+                  />
+                </button>
+              ) : (
                 <Link
                   href={link.url}
-                  className="text-sm md:text-base hover:text-primary transition-colors duration-200"
+                  className="inline-flex items-center gap-2 text-sm font-medium tracking-[0.08em] text-slate-700 transition hover:text-cyan-600"
                 >
                   {link.title}
                 </Link>
-              </ul>
+              )}
+
+              {link.children ? (
+                <div
+                  className={`absolute left-0 top-full z-30 mt-3 min-w-[180px] rounded-[18px] border border-slate-200 bg-white p-3 shadow-xl transition duration-200 ${
+                    activeDropdown === link.id ? "block" : "hidden"
+                  }`}
+                >
+                  {link.children.map((child) => (
+                    <Link
+                      key={child.url}
+                      href={child.url}
+                      className="block rounded-[12px] px-4 py-3 text-sm font-medium text-slate-700 transition hover:bg-slate-100 hover:text-cyan-600"
+                      onClick={() => setActiveDropdown(null)}
+                    >
+                      {child.title}
+                    </Link>
+                  ))}
+                </div>
+              ) : null}
             </div>
           ))}
-        </div>
+        </nav>
 
-        {/* Logo */}
-        <div className="flex justify-center items-center mb-4 sm:mb-0 hover:scale-105 transition-transform duration-300">
-          <Image
-            src="/images/logo.png"
-            alt="logo"
-            width={296}
-            height={74}
-            className="h-[50px] w-[200px] sm:h-[60px] sm:w-[240px] md:h-[74px] md:w-[296px] object-contain"
-          />
-        </div>
-
-        {/* Contact Section (Desktop) */}
-        <div className="hidden lg:flex items-center gap-2 sm:gap-3 md:gap-4">
-          <button className="hover:scale-110 transition-transform duration-200">
-            <Image
-              src="/icons/map.png"
-              alt="map"
-              width={34}
-              height={34}
-              className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8"
-            />
-          </button>
-          <button className="hover:scale-110 transition-transform duration-200">
-            <Image
-              src="/icons/call.png"
-              alt="call"
-              width={34}
-              height={34}
-              className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8"
-            />
-          </button>
-          <span className="underline text-sm md:text-base whitespace-nowrap">
-            281-345-1678
-          </span>
-          <Button
-            size="lg"
-            className="hover:scale-105 transition-transform duration-200 text-sm md:text-base"
-          >
-            Consult Now
-          </Button>
-        </div>
-
-        {/* Mobile Menu Overlay */}
-        <div
-          className={`lg:hidden fixed inset-0 bg-white z-40 transition-all duration-300 ${
-            isMenuOpen ? "translate-x-0" : "-translate-x-full"
-          }`}
-          style={{ top: "84px" }}
+        <Link
+          href="/contact"
+          className="hidden rounded-sm border border-cyan-200 bg-cyan-500 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:-translate-y-0.5 hover:bg-cyan-400 lg:block"
         >
-          <div className="flex flex-col items-center pt-8 space-y-6">
-            {NavItems.map((link) => (
+          Get Quote
+        </Link>
+
+        <button
+          className="rounded-full border border-slate-200 bg-white p-2 text-slate-700 lg:hidden"
+          onClick={() => setOpen(!open)}
+        >
+          {open ? <HiX size={24} /> : <HiMenuAlt3 size={24} />}
+        </button>
+      </div>
+
+      {open && (
+        <div className="border-t border-slate-200 bg-white/95 px-6 py-5 lg:hidden">
+          {navItems.map((link) => (
+            <div key={link.id} className="border-b border-slate-200 py-4 last:border-b-0">
               <Link
-                key={link.id}
                 href={link.url}
-                onClick={() => setIsMenuOpen(false)}
-                className="text-xl hover:text-primary transition-colors duration-200"
+                className="block text-sm font-medium tracking-[0.16em] text-slate-700"
+                onClick={() => setOpen(false)}
               >
                 {link.title}
               </Link>
-            ))}
-            <div className="flex items-center gap-4 mt-8">
-              <button className="hover:scale-110 transition-transform duration-200">
-                <Image
-                  src="/icons/map.svg"
-                  alt="map"
-                  width={34}
-                  height={34}
-                  className="h-8 w-8 bg-white"
-                />
-              </button>
-              <button className="hover:scale-110 transition-transform duration-200 ">
-                <Image
-                  src="/icons/call.svg"
-                  alt="call"
-                  width={34}
-                  height={34}
-                  className="h-8 w-8 bg-shadow-white bg-blend-overlay bg-neutral-800 "
-                />
-              </button>
-              <span className="underline text-lg">281-345-1678</span>
+              {link.children ? (
+                <div className="mt-3 space-y-2 pl-4">
+                  {link.children.map((child) => (
+                    <Link
+                      key={child.url}
+                      href={child.url}
+                      className="block text-sm text-slate-600 transition hover:text-cyan-600"
+                      onClick={() => setOpen(false)}
+                    >
+                      {child.title}
+                    </Link>
+                  ))}
+                </div>
+              ) : null}
             </div>
-            <Button
-              size="lg"
-              className="hover:scale-105 text-primary transition-transform duration-200 text-lg"
-            >
-              <span className="text-primary text-[18px]">Consult Now</span>
-            </Button>
-          </div>
+          ))}
         </div>
-      </div>
-    </main>
+      )}
+    </header>
   );
-};
-
-export default Navbar;
+}

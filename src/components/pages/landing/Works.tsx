@@ -8,14 +8,14 @@ const Works = () => {
         <div className="flex flex-col">
           <div className="flex flex-col justify-center items-center w-full">
             <div className="flex items-center text-center ">
-              <div className="rounded-full text-center items-center justify-center bg-primary flex py-2 px-5 h-10 text-white gap-2">
+              <div className="rounded-full text-center items-center justify-center bg-cyan-100 flex py-2 px-5 h-10 text-cyan-700 gap-2">
                 <span>
-                  <IoStar color="Yellow" />
+                  <IoStar color="#F59E0B" />
                 </span>
                 <span>5.0</span>
               </div>
-              <span><hr /></span>
-              <h2 className="font-oswald text-primary font-semibold text-[56px]">
+              <span><hr className="mx-4 h-px w-16 bg-slate-300 border-0" /></span>
+              <h2 className="font-oswald text-slate-900 font-semibold text-[56px]">
                 <span className="font-island font-medium text-[112px]">R</span>
                 ated
               </h2>
@@ -29,7 +29,7 @@ const Works = () => {
           <div className="  px-[100px] ">
             <div className="md:flex-row flex flex-col  gap-10 ">
               <div className="md:flex-row flex flex-col gap-10">
-                <div className="flex flex-col p-[32px] gap-5 text-white shadow-lg shadow-gray-500 bg-[#7CC561] w-[536px] h-[296px]">
+                <div className="flex flex-col p-[32px] gap-5 text-slate-900 shadow-lg shadow-gray-200 bg-white w-[536px] h-[296px]">
                   <p>
                     "If a garden could be a sacred space, then this is it – a
                     peaceful sanctuary where every stone and flower feels
@@ -42,7 +42,7 @@ const Works = () => {
                     <span>Janurary 12, 2025</span>
                   </div>
                 </div>
-                <div className="flex flex-col p-[32px] gap-5 text-white relative mt-50 shadow-lg shadow-gray-500 bg-[#7CC561] w-[536px] h-[296px]">
+                <div className="flex flex-col p-[32px] gap-5 text-slate-900 relative mt-50 shadow-lg shadow-gray-200 bg-white w-[536px] h-[296px]">
                   <p>
                     Called them and they made an appointment to show up that
                     day. The appointment was arranged according to my schedule.
