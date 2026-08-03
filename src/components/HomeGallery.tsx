@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { galleryData } from "@/lib/constants/data";
+import { galleryData, galleryDatas } from "@/lib/constants/data";
 
 const images = [1, 2, 3, 4, 5, 6];
 
@@ -25,7 +25,7 @@ export default function HomeGallery() {
         </div>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {galleryData.map((item, index) => (
+          {galleryDatas.map((item, index) => (
             <motion.div
               key={item.title}
               initial={{ opacity: 0, y: 16 }}
