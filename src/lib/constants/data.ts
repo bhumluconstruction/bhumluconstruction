@@ -146,7 +146,7 @@ export const projectsData: ProjectItem[] = [
     image: "/Gallery/image3.png",
   },
   {
-    eyebrow: "Project 03",
+    eyebrow: "Project 04",
     title: "Ghorahi-khungri Madichaur 132kV Transmission Line",
     slug: "ghorahi-khungri-madichaur-132kv-transmission-line",
     href: "/projects/ghorahi-khungri-madichaur-132kv-transmission-line",
@@ -165,7 +165,7 @@ export const projectsData: ProjectItem[] = [
     image: "/Gallery/image1.png",
   },
   {
-    eyebrow: "Project 04",
+    eyebrow: "Project 05",
     title: "Damauli-bharatpur220kV Transmission Line",
     slug: "damauli-bharatpur220kv-transmission-line",
     href: "/projects/damauli-bharatpur220kv-transmission-line",
