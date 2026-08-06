@@ -81,7 +81,7 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 z-20 overflow-hidden border-t border-slate-200 bg-white/90 py-3 backdrop-blur-sm">
+      <div className="absolute bottom-0 bg-yellow-500 left-0 right-0 z-20 overflow-hidden border-t border-slate-200  py-3 backdrop-blur-sm">
         <motion.div
           className="flex w-max gap-8 whitespace-nowrap px-4 text-sm font-medium uppercase tracking-[0.3em] text-slate-700"
           animate={{ x: [0, -((marqueeWords.length * 180) / 2)] }}
