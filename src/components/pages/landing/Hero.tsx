@@ -51,13 +51,13 @@ export default function Hero() {
           <div className="mt-12 flex flex-wrap gap-4">
             <Link
               href="/contact"
-              className="rounded-sm bg-cyan-500 px-8 py-4 font-semibold text-slate-950 transition hover:-translate-y-0.5 hover:bg-cyan-400"
+              className=" bg-yellow-500 border border-slate-950 px-8 py-4 font-semibold text-slate-950 transition hover:-translate-y-0.5 hover:bg-yellow-400"
             >
               Consult Now
             </Link>
             <Link
               href="/projects"
-              className="rounded-sm border border-slate-300/50 bg-white/90 px-8 py-4 font-semibold text-slate-950 backdrop-blur transition hover:border-cyan-400/50 hover:text-cyan-600"
+              className="border border-slate-950 bg-white/90 px-8 py-4 font-semibold text-slate-950 backdrop-blur transition hover:border-yellow-400/50 hover:text-yellow-600"
             >
               View Projects
             </Link>

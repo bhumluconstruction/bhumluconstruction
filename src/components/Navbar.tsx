@@ -105,7 +105,7 @@ export default function Navbar() {
 
         <Link
           href="/contact"
-          className="hidden rounded-sm border border-cyan-200 bg-cyan-500 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:-translate-y-0.5 hover:bg-cyan-400 lg:block"
+          className="hidden  border border-slate-950 bg-yellow-500 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:-translate-y-0.5 hover:bg-yellow-400 lg:block"
         >
           Get Quote
         </Link>
