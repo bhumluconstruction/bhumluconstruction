@@ -69,7 +69,7 @@ export const servicesData: ServiceItem[] = [
       "Tower spotting, route alignment and corridor optimization.",
       "Stakeout support and field coordination during pre-construction.",
     ],
-    image: "/Gallery/image1.png",
+    image: "/Gallery/image(1).jpg ",
     href: "/services/survey",
   },
   {
@@ -82,7 +82,7 @@ export const servicesData: ServiceItem[] = [
       "Conductor stringing, sagging and live-line safety.",
       "Testing, commissioning and handover support.",
     ],
-    image: "/Gallery/image2.png",
+    image: "/Gallery/image (2).jpg ",
     href: "/services/construction",
   },
 ];
@@ -105,7 +105,7 @@ export const projectsData: ProjectItem[] = [
       "Tower foundation design with local material adaptation.",
       "Stringing and sagging with live-line safety protocols.",
     ],
-    image: "/Gallery/image1.png",
+    image: "/Gallery/image(1).jpg ",
   },
   {
     eyebrow: "Project 02",
@@ -124,7 +124,7 @@ export const projectsData: ProjectItem[] = [
       "Access road alignment for heavy equipment.",
       "Concrete tower pad design with drainage management.",
     ],
-    image: "/Gallery/image2.png",
+    image: "/Gallery/image (2).jpg ",
   },
   {
     eyebrow: "Project 03",
@@ -143,7 +143,7 @@ export const projectsData: ProjectItem[] = [
       "Stakeout and tower spotting for minimum disruption.",
       "Final alignment plan with stakeholder review.",
     ],
-    image: "/Gallery/image3.png",
+    image: "/Gallery/image (3).jpg ",
   },
   {
     eyebrow: "Project 04",
@@ -162,7 +162,7 @@ export const projectsData: ProjectItem[] = [
       "Tower foundation design with local material adaptation.",
       "Stringing and sagging with live-line safety protocols.",
     ],
-    image: "/Gallery/image1.png",
+    image: "/Gallery/image (4).jpg ",
   },
   {
     eyebrow: "Project 05",
@@ -181,7 +181,7 @@ export const projectsData: ProjectItem[] = [
       "Tower foundation design with local material adaptation.",
       "Stringing and sagging with live-line safety protocols.",
     ],
-    image: "/Gallery/image1.png",
+    image: "/Gallery/image (5).jpg",
   },
 ];
 
