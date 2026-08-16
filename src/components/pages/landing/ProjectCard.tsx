@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 interface Props {
   eyebrow: string;
@@ -42,10 +44,7 @@ export default function ProjectCard({ eyebrow, title, location, status, descript
             {status}
           </span>
           {href ? (
-            <Link
-              href={href}
-              className="rounded-sm bg-amber-500 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-amber-400"
-            >
+            <Link href={href} className="bg-yellow-500 border border-slate-950 px-4 py-2 font-semibold text-slate-950 transition hover:-translate-y-0.5 hover:bg-yellow-400">
               View Project
             </Link>
           ) : null}

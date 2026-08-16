@@ -9,7 +9,7 @@ export default function Banner({ title, subtitle }: Props) {
       <div className="container">
         <p className="uppercase tracking-[6px] text-slate-500">{subtitle}</p>
 
-        <h1 className="mt-4 text-6xl font-bold">{title}</h1>
+        <h1 className="mt-4 text-3xl md:text-5xl lg:text-6xl font-bold">{title}</h1>
       </div>
     </section>
   );

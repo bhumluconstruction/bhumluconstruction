@@ -29,19 +29,19 @@ export const Founders = () => {
             <div className="p-8 md:p-10">
               <div className="flex items-center gap-4 mb-6">
                 <img
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=250"
-                  alt="Arthur Vance"
+                  src="/images/SauravRajKhanal.jpeg"
+                  alt="Saurav Raj Khanal"
                   className="w-20 h-20 rounded-full object-cover border-2 border-amber-500 shadow-md"
                 />
                 <div>
                   <h3 className="text-2xl font-bold text-slate-900">
-                    Arthur Vance, PE
+                    Saurav Raj Khanal
                   </h3>
                   <p className="text-amber-600 font-medium text-sm">
-                    Co-Founder & Chief Structural Engineer
+                    Co-Founder & Geomatics Engineer
                   </p>
                   <p className="text-xs text-slate-400 mt-0.5">
-                    25+ Years Industrial Infrastructure
+                    5+ Years Industrial Infrastructure
                   </p>
                 </div>
               </div>
@@ -53,7 +53,7 @@ export const Founders = () => {
               </blockquote>
 
               <p className="text-slate-600 text-sm leading-relaxed">
-                Arthur oversees master planning, structural integrity, and
+                Saurav oversees master planning, structural integrity, and
                 engineering quality assurance across all major commercial and
                 municipal builds. Prior to co-founding the firm, he served as
                 Lead Structural Consultant for regional transit infrastructure
@@ -64,10 +64,10 @@ export const Founders = () => {
             <div className="bg-slate-900 text-slate-300 px-8 py-5 border-t border-slate-800 flex items-center justify-between">
               <div className="flex items-center gap-2 text-xs font-semibold tracking-wide uppercase text-slate-400">
                 <Compass className="w-4 h-4 text-amber-500" /> Focus:
-                Engineering & Safety
+                Engineering & Technical Quality
               </div>
               <span className="font-serif text-lg tracking-widest text-slate-400 italic">
-                A. Vance
+                S. Khanal
               </span>
             </div>
           </div>
@@ -78,12 +78,12 @@ export const Founders = () => {
               <div className="flex items-center gap-4 mb-6">
                 <img
                   src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=250"
-                  alt="Helena Ross"
+                  alt="Sushil Parajuli"
                   className="w-20 h-20 rounded-full object-cover border-2 border-slate-900 shadow-md"
                 />
                 <div>
                   <h3 className="text-2xl font-bold text-slate-900">
-                    Helena Ross
+                    Sushil Parajuli
                   </h3>
                   <p className="text-slate-800 font-medium text-sm">
                     Co-Founder & Chief Operations Officer
@@ -101,8 +101,8 @@ export const Founders = () => {
               </blockquote>
 
               <p className="text-slate-600 text-sm leading-relaxed">
-                Helena leads site procurement, contractor management, vendor
-                partnerships, and financial execution. Under her operational
+                Sushil leads site procurement, contractor management, vendor
+                partnerships, and financial execution. Under his operational
                 leadership, the firm has maintained a 98% on-time completion
                 record across more than 140 major developments.
               </p>
@@ -114,7 +114,7 @@ export const Founders = () => {
                 Operations & Cost Control
               </div>
               <span className="font-serif text-lg tracking-widest text-slate-400 italic">
-                H. Ross
+                S. Parajuli
               </span>
             </div>
           </div>

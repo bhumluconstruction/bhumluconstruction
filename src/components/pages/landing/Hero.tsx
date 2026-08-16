@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { heroHighlights, marqueeWords } from "@/lib/constants/data";
+import TransmissionLines from "@/components/animations/TransmissionLines";
 
 export default function Hero() {
   return (
@@ -15,6 +16,8 @@ export default function Hero() {
         <path fill="#cbd5e1" d="M0 450L220 330L430 395L670 280L900 380L1160 250L1600 410V520H0Z" />
         <path fill="#f8fafc" d="M0 480L180 365L400 430L620 320L820 410L1040 290L1350 370L1600 320V520H0Z" />
       </svg>
+
+      <TransmissionLines responsive accent tower towerCount={1} towerScaleLarge={2.6} seed={Math.floor(Math.random() * 100000)} />
 
       <motion.div
         className="absolute left-0 top-1/2 h-40 w-40 -translate-y-1/2 rounded-full bg-amber-400/20 blur-[100px]"

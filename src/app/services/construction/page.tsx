@@ -6,32 +6,32 @@ const items = [
   {
     title: "Tower Foundations",
     description: "Design and build tower pads that suit steep slopes and soil conditions.",
-    image: "/Gallery/image2.png",
+    image: "/Gallery/image (2).jpg",
   },
   {
     title: "Access Road Planning",
     description: "Safe and efficient site access routes for heavy equipment and material delivery.",
-    image: "/Gallery/image3.png",
+    image: "/Gallery/image (3).jpg",
   },
   {
     title: "Conductor Stringing",
     description: "Precise stringing operations with tension control and safety checks.",
-    image: "/Gallery/image4.png",
+    image: "/Gallery/image (4).jpg",
   },
   {
     title: "Erection Safety",
     description: "Tower erection protocols that protect teams and reduce schedule risk.",
-    image: "/Gallery/image5.png",
+    image: "/Gallery/image (5).jpg",
   },
   {
     title: "Commissioning Support",
     description: "Testing, inspection and handover support to bring lines safely online.",
-    image: "/Gallery/image.png",
+    image: "/Gallery/image (6).jpg",
   },
   {
     title: "Field Coordination",
     description: "Cross-team coordination between survey, civil and electrical execution.",
-    image: "/Gallery/image1.png",
+    image: "/Gallery/image (7).jpg",
   },
 ];
 
@@ -64,10 +64,10 @@ export default function ConstructionPage() {
             </div>
             <div className="grid gap-6 sm:grid-cols-2">
               <div className="overflow-hidden rounded-[24px] border border-slate-200 bg-white shadow-[0_16px_40px_rgba(15,23,42,0.08)]">
-                <Image src="/Gallery/image2.png" alt="Foundation work" width={840} height={540} className="h-72 w-full object-cover transition duration-500 ease-out hover:scale-105" />
+                <Image src="/Gallery/image (2).jpg" alt="Foundation work" width={840} height={540} className="h-72 w-full object-cover transition duration-500 ease-out hover:scale-105" />
               </div>
               <div className="overflow-hidden rounded-[24px] border border-slate-200 bg-white shadow-[0_16px_40px_rgba(15,23,42,0.08)]">
-                <Image src="/Gallery/image3.png" alt="Road access" width={840} height={540} className="h-72 w-full object-cover transition duration-500 ease-out hover:scale-105" />
+                <Image src="/Gallery/image (3).jpg" alt="Road access" width={840} height={540} className="h-72 w-full object-cover transition duration-500 ease-out hover:scale-105" />
               </div>
             </div>
           </div>

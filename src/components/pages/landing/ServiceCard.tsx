@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 interface Props {
   eyebrow: string;
@@ -32,7 +34,7 @@ export default function ServiceCard({ eyebrow, title, description, overview, fea
         <p className="mt-4 text-base leading-7 text-slate-700">{description}</p>
         {overview ? <p className="mt-4 text-slate-700">{overview}</p> : null}
         {features ? (
-          <ul className="mt-6 space-y-3 text-slate-700">
+          <ul className="mt-6 mb-5 space-y-3 text-slate-700">
             {features.map((feature) => (
               <li key={feature} className="before:content-['•'] before:text-amber-300 before:mr-2 before:font-bold">
                 {feature}
@@ -40,10 +42,7 @@ export default function ServiceCard({ eyebrow, title, description, overview, fea
             ))}
           </ul>
         ) : null}
-        <Link
-          href={href}
-          className="mt-8 inline-flex rounded-sm bg-amber-500 px-6 py-3 font-semibold text-slate-950 transition hover:bg-amber-400"
-        >
+        <Link href={href} className="bg-yellow-500 border border-slate-950 px-4 py-2 font-semibold text-slate-950 transition hover:-translate-y-0.5 hover:bg-yellow-400">
           Learn More
         </Link>
       </div>

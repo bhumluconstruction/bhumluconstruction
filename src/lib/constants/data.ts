@@ -285,9 +285,13 @@ export const aboutValues = [
 ];
 
 export const contactDetails: ContactDetail[] = [
-  { label: "Office", value: "Kathmandu, Nepal", href: "https://maps.google.com" },
-  { label: "Phone", value: "+977 98-XXXXXXXX", href: "tel:+9779899999999" },
-  { label: "Email", value: "info@bhumlu.com", href: "mailto:info@bhumlu.com" },
+  {
+    label: "Office",
+    value: "Kathmandu, Nepal",
+    href: "https://maps.google.com",
+  },
+  { label: "Phone", value: "+977 9865591950", href: "tel:+9779865591950" },
+  { label: "Email", value: "bhumluconstruction@gmail.com", href: "mailto:bhumluconstruction@gmail.com" },
 ];
 
 export const marqueeWords = [

@@ -15,8 +15,8 @@ const Works = () => {
                 <span>5.0</span>
               </div>
               <span><hr className="mx-4 h-px w-16 bg-slate-300 border-0" /></span>
-              <h2 className="font-oswald text-slate-900 font-semibold text-[56px]">
-                <span className="font-island font-medium text-[112px]">R</span>
+              <h2 className="font-oswald text-slate-900 font-semibold text-3xl md:text-[56px]">
+                <span className="font-island font-medium text-4xl md:text-[112px]">R</span>
                 ated
               </h2>
             </div>
@@ -26,10 +26,10 @@ const Works = () => {
             </h2>
           </div>
 
-          <div className="  px-[100px] ">
-            <div className="md:flex-row flex flex-col  gap-10 ">
+          <div className="px-6 md:px-[100px]">
+            <div className="md:flex-row flex flex-col gap-10">
               <div className="md:flex-row flex flex-col gap-10">
-                <div className="flex flex-col p-[32px] gap-5 text-slate-900 shadow-lg shadow-gray-200 bg-white w-[536px] h-[296px]">
+                <div className="flex flex-col p-6 md:p-[32px] gap-5 text-slate-900 shadow-lg shadow-gray-200 bg-white w-full md:w-[536px] h-auto md:h-[296px]">
                   <p>
                     "If a garden could be a sacred space, then this is it – a
                     peaceful sanctuary where every stone and flower feels
@@ -42,7 +42,7 @@ const Works = () => {
                     <span>Janurary 12, 2025</span>
                   </div>
                 </div>
-                <div className="flex flex-col p-[32px] gap-5 text-slate-900 relative mt-50 shadow-lg shadow-gray-200 bg-white w-[536px] h-[296px]">
+                <div className="flex flex-col p-6 md:p-[32px] gap-5 text-slate-900 relative mt-12 md:mt-50 shadow-lg shadow-gray-200 bg-white w-full md:w-[536px] h-auto md:h-[296px]">
                   <p>
                     Called them and they made an appointment to show up that
                     day. The appointment was arranged according to my schedule.
@@ -56,7 +56,7 @@ const Works = () => {
                     <span>Janurary 12, 2025</span>
                   </div>
                 </div>
-                <div className=" h-[736px] w-[568px] bg-[url(/images/Instaimage.png)] bg-cover bg-center p-0 relative top-[-30]"></div>
+                <div className="w-full md:w-[568px] h-auto md:h-[736px] bg-[url(/images/Instaimage.png)] bg-cover bg-center p-0 relative md:top-[-30]"></div>
               </div>
             </div>
           </div>

@@ -5,32 +5,32 @@ const items = [
   {
     title: "Route Alignment",
     description: "Route corridor planning that balances terrain, access and future reliability.",
-    image: "/Gallery/image1.png",
+    image: "/Gallery/image(1).jpg",
   },
   {
     title: "Topographic Survey",
     description: "High-precision terrain mapping for profile drawing and construction planning.",
-    image: "/Gallery/image2.png",
+    image: "/Gallery/image (2).jpg",
   },
   {
     title: "Profile Drawing",
     description: "Detailed profile and cross-section deliverables for slope and span design.",
-    image: "/Gallery/image4.png",
+    image: "/Gallery/image (4).jpg",
   },
   {
     title: "Tower Spotting",
     description: "Optimal tower locations based on terrain, soil and accessibility.",
-    image: "/Gallery/image3.png",
+    image: "/Gallery/image (3).jpg",
   },
   {
     title: "GIS Mapping",
     description: "Digital corridor deliverables for planning, approvals and site mobilization.",
-    image: "/Gallery/image5.png",
+    image: "/Gallery/image (5).jpg",
   },
   {
     title: "Land Coordination",
     description: "Stakeholder coordination and alignment approval support in the field.",
-    image: "/Gallery/image.png",
+    image: "/Gallery/image (6).jpg",
   },
 ];
 
