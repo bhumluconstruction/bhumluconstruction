@@ -85,9 +85,9 @@ export const TestimonialCarousel = () => {
         <div className="flex space-x-6 animate-marquee group-hover:[animation-play-state:paused] min-w-full flex-shrink-0">
           {doubledTestimonials.map((item, index) => (
             <div
-                key={`${item.id}-${index}`}
-                className="w-[280px] sm:w-[320px] md:w-[420px] bg-slate-800/80 backdrop-blur-md border border-slate-700/60 rounded-xl p-6 md:p-8 flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300 shadow-xl flex-shrink-0"
-              >
+              key={`${item.id}-${index}`}
+              className="w-[85vw] min-w-[240px] max-w-[280px] sm:w-[320px] md:w-[420px] bg-slate-800/80 backdrop-blur-md border border-slate-700/60 rounded-xl p-6 md:p-8 flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300 shadow-xl flex-shrink-0"
+            >
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex text-amber-400">

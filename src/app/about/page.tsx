@@ -55,7 +55,7 @@ export default function AboutPage() {
               infrastructure with full attention to site conditions.
             </p>
             <div className="flex flex-col gap-6 mt-10 mb-10 lg:flex-row lg:items-center lg:gap-8">
-              <div className="flex flex-1 gap-6 grid-cols-3 lg:grid">
+              <div className="grid flex-1 gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                 {aboutValues.map((item) => {
                   const Icon = item.icon;
                   return (

@@ -76,11 +76,11 @@ export default function SurveyPage() {
               </div>
             </div>
             <div className="grid gap-6 sm:grid-cols-2">
-              <div className="overflow-hidden rounded-[24px] border border-slate-200 bg-white shadow-[0_16px_40px_rgba(15,23,42,0.08)]">
-                <Image src="/Gallery/image1.png" alt="Survey team" width={840} height={540} className="h-72 w-full object-cover transition duration-500 ease-out hover:scale-105" />
+              <div className="overflow-hidden rounded-[24px]   ">
+                <Image src="/Gallery/image (2).jpg" alt="Survey team" width={840} height={540} className="h-72 w-full object-cover transition duration-500 ease-out hover:scale-105" />
               </div>
-              <div className="overflow-hidden rounded-[24px] border border-slate-200 bg-white shadow-[0_16px_40px_rgba(15,23,42,0.08)]">
-                <Image src="/Gallery/image4.png" alt="Mapping" width={840} height={540} className="h-72 w-full object-cover transition duration-500 ease-out hover:scale-105" />
+              <div className="overflow-hidden rounded-[24px]  ">
+                <Image src="/Gallery/image (3).jpg" alt="Mapping" width={840} height={120} className="h-72 w-full object-cover transition duration-500 ease-out hover:scale-105" />
               </div>
             </div>
           </div>

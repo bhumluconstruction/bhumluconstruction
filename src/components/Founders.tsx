@@ -77,7 +77,7 @@ export const Founders = () => {
             <div className="p-8 md:p-10">
               <div className="flex items-center gap-4 mb-6">
                 <img
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=250"
+                  src="/images/SushilParajuli.jpeg"
                   alt="Sushil Parajuli"
                   className="w-20 h-20 rounded-full object-cover border-2 border-slate-900 shadow-md"
                 />
