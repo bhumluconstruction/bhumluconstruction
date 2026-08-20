@@ -57,3 +57,29 @@ img {
   display: block;
   max-width: 100%;
 }
+/* Add this to your globals.css (wherever your @import "tailwindcss" lives) */
+
+@theme {
+  --animate-marquee-vertical: marquee-vertical 28s linear infinite;
+  --animate-marquee-horizontal: marquee-horizontal 35s linear infinite;
+}
+
+@keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes marquee-horizontal {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}

@@ -14,7 +14,7 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "Marcus Vance",
+    name: "Prakash Shrestha",
     role: "VP of Real Estate",
     company: "Apex Commercial Group",
     projectType: "Commercial High-Rise",
@@ -24,7 +24,7 @@ const testimonials: Testimonial[] = [
   },
   {
     id: 2,
-    name: "Elena Rostova",
+    name: "Sunita Gurung",
     role: "Director of Facilities",
     company: "Vanguard Logistics",
     projectType: "Industrial Warehouse Hub",
@@ -34,7 +34,7 @@ const testimonials: Testimonial[] = [
   },
   {
     id: 3,
-    name: "David & Sarah Chen",
+    name: "Rajesh & Anita Thapa",
     role: "Property Developers",
     company: "Horizon Estates",
     projectType: "Luxury Multi-Family Housing",
@@ -44,7 +44,7 @@ const testimonials: Testimonial[] = [
   },
   {
     id: 4,
-    name: "Robert Sterling",
+    name: "Bikash Karki",
     role: "Chief Operations Officer",
     company: "Sterling Holdings",
     projectType: "Corporate HQ Retrofit",
@@ -77,16 +77,18 @@ export const TestimonialCarousel = () => {
       </div>
 
       {/* Infinite Carousel Container */}
-      <div className="relative flex w-full overflow-hidden group">
-        {/* Left/Right Fading Gradients */}
-        <div className="absolute left-0 top-0 bottom-0 w-24 md:w-48 bg-gradient-to-r from-slate-900 to-transparent z-20 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-24 md:w-48 bg-gradient-to-l from-slate-900 to-transparent z-20 pointer-events-none" />
+      {/* Mobile: fixed-height vertical strip that scrolls top-to-bottom */}
+      {/* Desktop (md+): full-width horizontal strip that scrolls left-to-right */}
+      <div className="relative flex w-full h-[620px] md:h-auto overflow-hidden group">
+        {/* Top/Bottom fades on mobile, Left/Right fades on desktop */}
+        <div className="absolute left-0 right-0 top-0 h-20 md:h-full md:w-48 md:right-auto bg-gradient-to-b md:bg-gradient-to-r from-slate-900 to-transparent z-20 pointer-events-none" />
+        <div className="absolute left-0 right-0 bottom-0 h-20 md:h-full md:w-48 md:left-auto bg-gradient-to-t md:bg-gradient-to-l from-slate-900 to-transparent z-20 pointer-events-none" />
 
-        <div className="flex space-x-6 animate-marquee group-hover:[animation-play-state:paused] min-w-full flex-shrink-0">
+        <div className="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6 animate-marquee-vertical md:animate-marquee-horizontal group-hover:[animation-play-state:paused] w-full md:min-w-full flex-shrink-0">
           {doubledTestimonials.map((item, index) => (
             <div
               key={`${item.id}-${index}`}
-              className="w-[85vw] min-w-[240px] max-w-[280px] sm:w-[320px] md:w-[420px] bg-slate-800/80 backdrop-blur-md border border-slate-700/60 rounded-xl p-6 md:p-8 flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300 shadow-xl flex-shrink-0"
+              className="w-full h-[280px] md:h-auto md:w-[420px] md:min-w-[240px] md:max-w-[420px] bg-slate-800/80 backdrop-blur-md border border-slate-700/60 rounded-xl p-6 md:p-8 flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300 shadow-xl flex-shrink-0"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
@@ -104,7 +106,7 @@ export const TestimonialCarousel = () => {
                 </div>
 
                 <Quote className="w-8 h-8 text-slate-600 mb-2 rotate-180 opacity-50" />
-                <p className="text-slate-300 text-sm md:text-base leading-relaxed mb-6 italic">
+                <p className="text-slate-300 text-sm md:text-base leading-relaxed mb-6 italic line-clamp-4 md:line-clamp-none">
                   "{item.quote}"
                 </p>
               </div>
