@@ -40,9 +40,7 @@ export default function HomeGallery() {
                 alt={item.alt}
                 className="h-80 w-full object-cover transition duration-700 ease-out group-hover:scale-105 group-hover:brightness-110"
               />
-              <div className="border-t border-slate-100 p-4 text-sm font-semibold uppercase tracking-[0.24em] text-slate-700">
-                {item.title}
-              </div>
+              
             </motion.div>
           ))}
         </div>

@@ -23,12 +23,7 @@ export default function GalleryPage() {
                   alt={item.alt}
                   className="h-80 w-full object-cover transition duration-700 ease-out group-hover:scale-105"
                 />
-                <div className="border-t border-slate-100 p-4">
-                  <p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-600">
-                    {item.title}
-                  </p>
-                  <p className="mt-3 text-sm text-slate-600">Field and survey imagery that supports route planning, construction and commissioning.</p>
-                </div>
+                
               </div>
             ))}
           </div>

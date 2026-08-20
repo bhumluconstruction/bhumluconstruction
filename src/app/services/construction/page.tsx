@@ -57,7 +57,7 @@ export default function ConstructionPage() {
               </p>
               <Link
                 href="/contact"
-                className="mt-8 inline-flex rounded-sm bg-amber-500 px-6 py-3 font-semibold text-slate-950 transition hover:bg-amber-400"
+                className="mt-8 inline-flex border bg-amber-500 px-6 py-3 font-semibold text-slate-950 transition hover:bg-amber-400"
               >
                 Discuss Construction
               </Link>

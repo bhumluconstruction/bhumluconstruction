@@ -110,7 +110,7 @@ export default function ProjectsPage() {
                       background: "#FF9F1C",
                       color: "#0E141B",
                       fontWeight: 700,
-                      borderRadius: "8px",
+                      border:"1px",
                       padding: "10px 20px",
                       fontSize: "13px",
                       textDecoration: "none",
