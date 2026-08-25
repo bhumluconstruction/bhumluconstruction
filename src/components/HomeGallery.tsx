@@ -27,7 +27,7 @@ export default function HomeGallery() {
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {galleryDatas.map((item, index) => (
             <motion.div
-              key={item.title}
+              key={item.alt}
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
