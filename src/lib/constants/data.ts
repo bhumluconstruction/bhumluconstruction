@@ -216,7 +216,7 @@ export const projectsData: ProjectItem[] = [
     title: "MCC",
     slug: "mcc",
     href: "/projects/mcc",
-    location: "Bharatpur",
+    location: "Nuwakot-Chitwan",
     status: "In-process",
     description:
       "This project is in starting phase and will be completed in 2029. It involves route survey, tower spotting and conductor installation for a critical uphill corridor.",
