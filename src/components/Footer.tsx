@@ -1,13 +1,13 @@
 import Link from "next/link";
 import { footerSections } from "@/lib/constants/data";
-
+import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="border-t border-slate-200 bg-slate-50 text-slate-900">
       <div className="container py-20">
         <div className="grid gap-12 md:grid-cols-4">
           <div>
-            <h2 className="mb-6 text-3xl font-black text-amber-600">BHUMLU</h2>
+            <h2 className="mb-6 text-3xl font-black text-amber-600"><Image src="/Logo/logo.png" alt="Company Logo" width={100} height={50} />Construction</h2>
 
             <p className="max-w-sm text-sm leading-7 text-slate-400">
               Professional transmission line surveying, route planning and

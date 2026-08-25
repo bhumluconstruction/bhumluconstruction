@@ -124,7 +124,7 @@ export const Founders = () => {
         <div className="mt-16 bg-white border border-slate-200 rounded-xl p-6 md:p-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center shadow-sm">
           <div>
             <div className="text-3xl md:text-4xl font-extrabold text-slate-900">
-              $450M+
+              NPR 50Cr+
             </div>
             <div className="text-xs md:text-sm text-slate-500 font-medium mt-1">
               Completed Project Value
@@ -132,7 +132,7 @@ export const Founders = () => {
           </div>
           <div>
             <div className="text-3xl md:text-4xl font-extrabold text-slate-900">
-              18+
+              10+
             </div>
             <div className="text-xs md:text-sm text-slate-500 font-medium mt-1">
               Years in Industry

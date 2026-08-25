@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { HiChevronDown, HiMenuAlt3, HiX } from "react-icons/hi";
@@ -41,9 +41,12 @@ export default function Navbar() {
     >
       <div className="container flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
-          <div className="flex h-11 w-11 items-center justify-center rounded-full bg-amber-500 text-sm font-black text-slate-950">
-            B
-          </div>
+          <Image
+            src="/Logo/logo.png"
+            alt="BHUMLU Logo"
+            width={100}
+            height={50}
+          />
           <div className="leading-none">
             <span className="block text-lg font-black tracking-[0.24em] text-slate-950">
               BHUMLU
@@ -61,14 +64,18 @@ export default function Navbar() {
                 <button
                   type="button"
                   onClick={() =>
-                    setActiveDropdown((current) => (current === link.id ? null : link.id))
+                    setActiveDropdown((current) =>
+                      current === link.id ? null : link.id,
+                    )
                   }
                   className="inline-flex items-center gap-2 text-sm font-medium tracking-[0.08em] text-slate-700 transition hover:text-cyan-600"
                 >
                   {link.title}
                   <HiChevronDown
                     className={`h-4 w-4 transition ${
-                      activeDropdown === link.id ? "text-cyan-600 rotate-180" : "text-slate-700"
+                      activeDropdown === link.id
+                        ? "text-cyan-600 rotate-180"
+                        : "text-slate-700"
                     }`}
                   />
                 </button>
@@ -121,7 +128,10 @@ export default function Navbar() {
       {open && (
         <div className="border-t border-slate-200 bg-white/95 px-6 py-5 lg:hidden">
           {navItems.map((link) => (
-            <div key={link.id} className="border-b border-slate-200 py-4 last:border-b-0">
+            <div
+              key={link.id}
+              className="border-b border-slate-200 py-4 last:border-b-0"
+            >
               <Link
                 href={link.url}
                 className="block text-sm font-medium tracking-[0.16em] text-slate-700"

@@ -45,8 +45,7 @@ export interface ProjectItem {
 }
 
 export interface GalleryItem {
-  title: string;
-  accent: string;
+  
   src: string;
   alt: string;
 }

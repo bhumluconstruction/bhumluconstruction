@@ -15,7 +15,7 @@ export default function GalleryPage() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {galleryData.map((item) => (
               <div
-                key={item.title}
+                key={item.alt}
                 className="group overflow-hidden rounded-[24px] border border-slate-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.08)]"
               >
                 <img
