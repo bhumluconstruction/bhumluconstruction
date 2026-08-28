@@ -9,7 +9,7 @@ const projectSlugs = [
   'survey-alignment',
   'ghorahi-khungri-madichaur-132kv-transmission-line',
   'damauli-bharatpur220kv-transmission-line',
-  'mcc',
+  ,
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {

@@ -211,28 +211,7 @@ export const projectsData: ProjectItem[] = [
     ],
     image: "/Gallery/image (5).jpg",
   },
-  {
-    eyebrow: "Project 05",
-    title: "MCC",
-    slug: "mcc",
-    href: "/projects/mcc",
-    location: "Nuwakot-Chitwan",
-    status: "In-process",
-    description:
-      "This project is in starting phase and will be completed in 2029. It involves route survey, tower spotting and conductor installation for a critical uphill corridor.",
-    scope:
-      "Complete route planning, tower spotting, foundation design and conductor stringing across challenging terrain.",
-    timeline: "12 months from survey mobilization to commissioning.",
-    client: "Nepal Electricity Authority",
-    outcome:
-      "Improved line reliability, reduced corridor risk, and optimized tower placement for steep slopes.",
-    details: [
-      "Topographic survey across 72 km of ridge and valley.",
-      "Tower foundation design with local material adaptation.",
-      "Stringing and sagging with live-line safety protocols.",
-    ],
-    image: "/Gallery/image (5).jpg",
-  },
+  
 ];
 
 export const galleryData: GalleryItem[] = [
